@@ -6,7 +6,7 @@
 #include "../include/SDL2/SDL_image.h"
 #include "../include/prototypes.h"
 
-int init_SDL();
+
 
 int init_SDL() {
     if (SDL_Init(SDL_INIT_EVERYTHING) < 0) {
@@ -29,13 +29,13 @@ int main(int ac, char **av) {
     }
 
     if (ac != 2) {  //s'il n'y a pas deux arguments
-        printf("erreur probleme d'arguments\n");
+        printf("erreur probleme d'arguments\nIl faut rentrer le chemin d'une image\n");
         return EXIT_FAILURE;
     } else {
         if (change_image(av[1]) == EXIT_FAILURE) {
             return EXIT_FAILURE;
         }
     }
-
+    printf("OK !, l'image a été créée dans le même endroit que vous sous le nom \"copy_image\"\n");
     return EXIT_SUCCESS;
 }

@@ -11,7 +11,6 @@
 int init_SDL(); //function to init the SDL and SDL_image
 
 int change_image(char *path_image); //the function to get the picture and will change to grey color
-void setColor(SDL_Surface *surface, int W, int H, Uint32 *pixels); //get the color of the pixel and change to grey
-void applyColor(SDL_Surface *surface, int W, int H, Uint32 *pixels); //now apply the grey color on the surface
+void setColor(SDL_Surface *surface); //get the color of the pixel and change to grey
 
 #endif
